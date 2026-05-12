@@ -123,6 +123,8 @@ Debian is a stable and complete Linux distribution widely used on servers and de
 - Longer download times
 - Uses more system resources
 
+For my project, I use Alpine to have a lighter images and a faster container start. Also to understand better how it works, i felt it was relevant to use the minimal distribution.
+
 ---
 
 # Virtual Machines vs Docker
@@ -179,7 +181,7 @@ Docker secrets allow sensitive information to be stored inside temporary files m
 - Mainly designed for Docker Swarm
 - Less commonly used in simple projects
 
-In this project, environment variables are used for general service configuration, while Docker secrets are used to protect sensitive data such as passwords.
+In this project, environment variables are used for general service configuration. 
 
 ---
 
@@ -437,7 +439,7 @@ Make sure the domain is added to `/etc/hosts`:
 
 ```bash
 127.0.0.1 pchatagn.42.fr
-
+```
 ---
 
 ## Security
