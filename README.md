@@ -289,18 +289,7 @@ cd inception
 
 ## Project Structure
 
-```bash
-.
-├── Makefile
-├── secrets/
-├── srcs/
-│   ├── docker-compose.yml
-│   ├── .env
-│   └── requirements/
-│       ├── mariadb/
-│       ├── nginx/
-│       └── wordpress/
-```
+file:///home/gitpchatagn/Pictures/Screenshots/Screenshot%20from%202026-05-12%2016-25-51.png
 
 ---
 
@@ -312,31 +301,41 @@ To build and start all services:
 make
 ```
 
-or:
+or 
 
 ```bash
-docker compose -f srcs/docker-compose.yml up --build
+make up
 ```
-
----
 
 ## Stop the Containers
 
 To stop the services:
 
 ```bash
+make stop
+```
+## Restart Existing Containers
+
+```bash
+make start
+```
+
+## Shut down the Containers
+
+```bash
 make down
 ```
 
-or:
+
+## Remove Containers and Volumes
+
+To clean the containers and volumes:
 
 ```bash
-docker compose -f srcs/docker-compose.yml down
+make clean
 ```
 
----
-
-## Remove Containers, Images and Volumes
+## Complete cleanup (containers, images, unsed Docker resources, volumes, networks)
 
 To completely clean the project:
 
@@ -344,29 +343,29 @@ To completely clean the project:
 make fclean
 ```
 
-This command removes:
-- containers
-- images
-- networks
-- volumes
+## Rebuild the Project
 
----
+To rebuild the project:
+
+```bash
+make re
+```
+
+## Display Container Logs
+
+To the logs of the container:
+
+```bash
+make logs
+```
 
 ## Access the Website
 
 Once the containers are running, open your browser and go to:
 
 ```bash
-https://localhost
+https://pchatagn.42.fr
 ```
-
-or:
-
-```bash
-https://<your_login>.42.fr
-```
-
-depending on your configuration.
 
 ---
 
@@ -430,6 +429,17 @@ docker network ls
 
 ---
 
+# Common Issues
+
+## Browser cannot access pchatagn.42.fr
+
+Make sure the domain is added to `/etc/hosts`:
+
+```bash
+127.0.0.1 pchatagn.42.fr
+
+---
+
 ## Security
 
 - HTTPS is enabled using TLSv1.3
@@ -469,5 +479,8 @@ docker network ls
 - Alpine Linux docs: https://wiki.alpinelinux.org/
 - PID 1 in Docker: https://cloud.google.com/architecture/best-practices-for-building-containers#signal-handling
 
+## Install VM 
+- VM guide installation: https://github.com/Bakr-1/inceptionVm-guide
+
 ## AI
-- Claude AI from anthropic was used to understand concepts and specific terms.
+- AI tools such as Claude (Anthropic) were occasionally used to help understand specific concepts and technical terminology.
