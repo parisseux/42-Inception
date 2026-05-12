@@ -12,15 +12,6 @@ Docker helps develop and run applications inside lightweight containers. Docker 
 
 To run multiple containers as a single application, we use Docker Compose. Docker Compose uses a YAML file.
 
-The general structure of this project is:
-
-Browser → Nginx → WordPress → MariaDB
-
-1. The browser sends a request.
-2. Nginx receives the request and redirects it to WordPress.
-3. WordPress generates the web page.
-4. MariaDB stores all the content.
-
 This project uses three separate services:
 - Nginx
 - WordPress
