@@ -431,6 +431,14 @@ docker network ls
 
 ---
 
+## Security
+
+- HTTPS is enabled using TLSv1.3
+- Passwords are stored using environment variables and Docker secrets
+- Services are isolated using Docker networks
+
+---
+
 # Common Issues
 
 ## Browser cannot access pchatagn.42.fr
@@ -442,13 +450,6 @@ Make sure the domain is added to `/etc/hosts`:
 ```
 ---
 
-## Security
-
-- HTTPS is enabled using TLSv1.3
-- Passwords are stored using environment variables and Docker secrets
-- Services are isolated using Docker networks
-
----
 
 
 # Resources
